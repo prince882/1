@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline with Multiple Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffa07a;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .iframe-container {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffa07a;
+            color: white;
+            margin-top: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            background-color: #ffa07a;
+            color: white;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #ff7f50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Interactive Timeline with Multiple Pages</h1>
+        </div>
+        <nav>
+            <a href="page1.html" target="contentFrame">Page 1</a>
+            <a href="page2.html" target="contentFrame">Page 2</a>
+            <a href="page3.html" target="contentFrame">Page 3</a>
+        </nav>
+        <div class="iframe-container">
+            <iframe name="contentFrame" src="page1.html"></iframe>
+        </div>
+        <div class="footer">
+            <p>Celebrating India's Journey to Independence</p>
+        </div>
+    </div>
+</body>
+</html>

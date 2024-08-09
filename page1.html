@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline of India's Independence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffa07a;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ffa07a;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #ffa07a;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffa07a;
+            color: white;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline-item::after {
+                left: 60px;
+            }
+            .left, .right {
+                width: 100%;
+                left: 0;
+                text-align: center;
+            }
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Interactive Timeline of India's Independence</h1>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="content">
+                    <h2>1857</h2>
+                    <p>The First War of Indian Independence, also known as the Sepoy Mutiny or Rebellion of 1857, begins.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="content">
+                    <h2>1885</h2>
+                    <p>The Indian National Congress is founded, marking the beginning of an organized Indian nationalist movement.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="content">
+                    <h2>1919</h2>
+                    <p>The Jallianwala Bagh Massacre occurs, intensifying Indian demands for independence.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="content">
+                    <h2>1930</h2>
+                    <p>The Dandi March, led by Mahatma Gandhi, becomes a pivotal event in the Civil Disobedience Movement.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="content">
+                    <h2>1942</h2>
+                    <p>The Quit India Movement is launched, demanding an end to British rule in India.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="content">
+                    <h2>1947</h2>
+                    <p>India gains independence from British rule on August 15th.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Celebrating India's Journey to Independence</p>
+        </div>
+    </div>
+</body>
+</html>
